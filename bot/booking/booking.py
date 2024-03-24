@@ -29,7 +29,5 @@ class Booking(webdriver.Firefox):
     def change_currency(self, currency=None):
         currency_element = self.find_element(By.CLASS_NAME, "f419a93f12")
         currency_element.click()
-        selected_curr_ele = self.find_element(
-            By.CSS_SELECTOR, 'button[data-testid="selection-item"]'
-        )
+        selected_curr_ele = self.find_element(By.CLASS_NAME, "abced745f1")
         selected_curr_ele.click()
